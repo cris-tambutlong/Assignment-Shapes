@@ -49,7 +49,7 @@ class CubeTest extends PHPUnit_Framework_TestCase {
 	 * Input a value that serves as the length of 1 side
 	 * of a cube and returns the surface area.
 	 *
-	 * @covers Cube::surface_area
+	 * @covers Cube::area
 	 */
 	public function testCubeSurfaceAreaComputationIsCorrect()
 	{
@@ -58,9 +58,27 @@ class CubeTest extends PHPUnit_Framework_TestCase {
 		//surface area math formula for a cube.
 		
 		$length_of_side = 20;
-		$surface_area = 6 * sqrt($length_of_side);
+		$area = 6 * sqrt($length_of_side);
 		
-		$this->assertEquals($this->cube->surface_area(), $surface_area);
+		$this->assertEquals($this->cube->area(), $area);
+	}
+	
+	/**
+	 * Input a value that serves as the length of 1 side
+	 * of a cube and returns the perimeter.
+	 *
+	 * @covers Cube::perimeter
+	 */
+	public function testCubePerimeterComputationIsCorrect()
+	{
+		//Set a mock value for the cube's length of side.
+		//and compute the perimeter based on the 
+		//perimeter math formula for a cube.
+		
+		$length_of_side = 20;
+		$perimeter = 12 * $length_of_side;
+		
+		$this->assertEquals($this->cube->perimeter(), $perimeter);
 	}
 	
 	/**

@@ -49,7 +49,7 @@ class SphereTest extends PHPUnit_Framework_TestCase {
 	 * Input a value that serves as the radius
 	 * of a sphere and returns the surface area.
 	 *
-	 * @covers Sphere::surface_area
+	 * @covers Sphere::area
 	 */
 	public function testSphereSurfaceAreaComputationIsCorrect()
 	{
@@ -58,9 +58,27 @@ class SphereTest extends PHPUnit_Framework_TestCase {
 		//surface area math formula for a sphere.
 		
 		$radius = 20;
-		$surface_area = 4 * pi() * sqrt($radius);
+		$area = 4 * pi() * sqrt($radius);
 		
-		$this->assertEquals($this->sphere->surface_area(), $surface_area);
+		$this->assertEquals($this->sphere->area(), $area);
+	}
+	
+	/**
+	 * Input a value that serves as the radius
+	 * of a sphere and returns the perimeter.
+	 *
+	 * @covers Sphere::perimeter
+	 */
+	public function testSpherePerimeterComputationIsCorrect()
+	{
+		//Set a mock value for the sphere's radius.
+		//and compute the perimeter based on the 
+		//circumference math formula for a sphere.
+		
+		$radius = 20;
+		$perimeter = 2 * pi() * $radius;
+		
+		$this->assertEquals($this->sphere->perimeter(), $perimeter);
 	}
 	
 	/**
