@@ -19,18 +19,8 @@ class Calculator {
 		//them one by one.
 		foreach($shapes as $shape)
 		{
-			//We making sure we execute the correct area method 
-			//for each shape object. Normally, a 2D object computes
-			//for the area while a 3D object computes for surface area.
-			
-			if ($shape instanceof Shape3D)
-			{
-				$sum += $shape->surface_area();
-			}
-			else
-			{
-				$sum += $shape->area();
-			}
+			//Computing for the total area of all shapes.
+			$sum += $shape->area();
 		}	
 		
 		//Return the total sum of area.
