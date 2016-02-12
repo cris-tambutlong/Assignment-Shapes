@@ -31,9 +31,19 @@ class Cube implements Shape3D {
 	 *
 	 * @return int
 	 */
-	public function surface_area()
+	public function area()
 	{
 		return 6 * sqrt($this->side);
+	}
+	
+	/**
+	 * Get the perimeter.
+	 *
+	 * @return int
+	 */
+	public function perimeter()
+	{
+		return 12 * $this->side;
 	}
 
 	/**
