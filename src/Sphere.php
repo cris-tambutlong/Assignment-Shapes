@@ -31,9 +31,21 @@ class Sphere implements Shape3D {
 	 *
 	 * @return double
 	 */
-	public function surface_area()
+	public function area()
 	{
 		return 4 * pi() * sqrt($this->radius);
+	}
+	
+	/**
+	 * Get the perimeter. For a sphere shape we're computing
+	 * for the circumference.
+	 *
+	 * @return double
+	 */
+	public function perimeter()
+	{
+		//We're executing the circumference formula here.
+		return 2 * pi() * $this->radius;
 	}
 
 	/**
